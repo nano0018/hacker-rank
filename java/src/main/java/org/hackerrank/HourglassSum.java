@@ -8,12 +8,13 @@ public class HourglassSum {
         // Write your code here
         int rowSize = arr.get(1).size();
         int colSize = arr.size();
+        Integer maxSumValue = null;
 
         for (int colIndex = 0; colIndex < colSize - 2; colIndex++) {
             List<Integer> hourglassHead = new ArrayList<>();
             List<Integer> hourglassTail = new ArrayList<>();
             List<Integer> hourglassMiddle = new ArrayList<>();
-            if (colIndex < (colSize-2)) {
+            if (colIndex < (colSize - 2)) {
                 for (int i = 0; i < rowSize; i++) {
                     int pos1 = i;
                     int pos2 = i + 1;
@@ -32,30 +33,43 @@ public class HourglassSum {
                 }
             }
             for (int j = 1; j < rowSize - 1; j++) {
-                hourglassMiddle.add(arr.get(colIndex+1).get(j));
+                hourglassMiddle.add(arr.get(colIndex + 1).get(j));
             }
 
-            System.out.println(hourglassHead);
-            System.out.println(hourglassMiddle);
-            System.out.println(hourglassTail);
-            System.out.println("---");
+            for (int i = 0; i < hourglassMiddle.size(); i++) {
+                int pos1Element = i * 3;
+                int pos2Element = pos1Element + 1;
+                int pos3Element = pos2Element + 1;
+                int elementSum = 0;
 
+                elementSum = (hourglassHead.get(pos1Element) + hourglassHead.get(pos2Element) + hourglassHead.get(pos3Element)) +
+                        (hourglassTail.get(pos1Element) + hourglassTail.get(pos2Element) + hourglassTail.get(pos3Element)) + hourglassMiddle.get(i);
+                if (maxSumValue == null) {
+                    maxSumValue = elementSum;
+                }
+
+                if (maxSumValue < elementSum) {
+                    maxSumValue = elementSum;
+                }
+
+                System.out.println(elementSum);
+//                System.out.println(
+//                        hourglassHead.get(pos1Element) + " " + hourglassHead.get(pos2Element) + " " + hourglassHead.get(pos3Element) + "\n" +
+//                                "  " + hourglassMiddle.get(i) + " " + "\n" +
+//                                hourglassTail.get(pos1Element) + " " + hourglassTail.get(pos2Element) + " " + hourglassTail.get(pos3Element) + "\n"
+//                );
+            }
 
         }
-
-
-
-
-
-
-        return 12;
+        return maxSumValue;
     }
 
-    public static List<Integer> StringArrToIntArr(String[] s) {
+    public static List<Integer> stringArrToIntArr(String[] s) {
         List<Integer> result = new ArrayList<>();
         for (int i = 0; i < s.length; i++) {
             result.add(Integer.valueOf(s[i]));
         }
         return result;
     }
+
 }
