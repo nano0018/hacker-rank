@@ -37,6 +37,11 @@ public class Main {
 //        testList.add(data5);
 //        testList.add(data6);
 //        System.out.println(HourglassSum.hourglassSum(testList));
+        List<String> operations = new ArrayList<>();
+        operations.add("0 1 L");
+        operations.add("1 2 R");
+        operations.add("0 2 R");
 
+        System.out.println(RollingString.rollingString("abc", operations));
     }
 }
