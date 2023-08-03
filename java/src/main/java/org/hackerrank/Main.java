@@ -5,7 +5,7 @@ import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
-//        reverseArray
+////        reverseArray
 //        List<Integer> testList = new ArrayList<>();
 //        testList.add(1);
 //        testList.add(4);
@@ -14,7 +14,7 @@ public class Main {
 //        System.out.println(testList);
 //        System.out.println(ReverseArray.reverseArray(testList));
 
-//        hourglassSum
+////        hourglassSum
 //        List<List<Integer>> testList = new ArrayList<>();
 //
 //        String[] dataString1 = "0 0 0 0 -7 -6".split(" ");
@@ -37,11 +37,13 @@ public class Main {
 //        testList.add(data5);
 //        testList.add(data6);
 //        System.out.println(HourglassSum.hourglassSum(testList));
-        List<String> operations = new ArrayList<>();
-        operations.add("0 1 L");
-        operations.add("1 2 R");
-        operations.add("0 2 R");
+////        Rolling String
+//        List<String> operations = new ArrayList<>();
+//        operations.add("0 1 L");
+//        operations.add("1 2 R");
+//        operations.add("0 2 R");
+//
+//        System.out.println(RollingString.rollingString("abc", operations));
 
-        System.out.println(RollingString.rollingString("abc", operations));
     }
 }
