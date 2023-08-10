@@ -44,6 +44,13 @@ public class Main {
 //        operations.add("0 2 R");
 //
 //        System.out.println(RollingString.rollingString("abc", operations));
-
+        Staircase.staircase(4);
+        List<Integer> arr = new ArrayList<>();
+        arr.add(1);
+        arr.add(2);
+        arr.add(3);
+        arr.add(4);
+        arr.add(5);
+        MinMax.minMaxSum(arr);
     }
 }

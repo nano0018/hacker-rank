@@ -13,6 +13,4 @@ function diagonalDifference(arr) {
     return Math.abs(sumLeft - sumRight);
 }
 
-import {assertEquals} from './test/assert.mjs';
-assertEquals(diagonalDifference([[1, 2, 3], [4, 5, 6], [9, 8, 9]]), 2);
-assertEquals(diagonalDifference([[11, 2, 4], [4, 5, 6], [10, 8, -12]]), 15);
+module.exports = diagonalDifference;
