@@ -1,7 +1,11 @@
 package org.hackerrank;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
+import java.util.regex.MatchResult;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class Main {
     public static void main(String[] args) {
@@ -44,13 +48,18 @@ public class Main {
 //        operations.add("0 2 R");
 //
 //        System.out.println(RollingString.rollingString("abc", operations));
-        Staircase.staircase(4);
-        List<Integer> arr = new ArrayList<>();
-        arr.add(1);
-        arr.add(2);
-        arr.add(3);
-        arr.add(4);
-        arr.add(5);
-        MinMax.minMaxSum(arr);
+//        Staircase.staircase(4);
+//        List<Integer> arr = new ArrayList<>();
+//        arr.add(1);
+//        arr.add(2);
+//        arr.add(3);
+//        arr.add(4);
+//        arr.add(5);
+//        MinMax.minMaxSum(arr);
+        String time = "07:05:45PM";
+        String delimiters = "[a-zA-Z]+";
+        String[] numbers = time.split(delimiters)[0].split(":");
+        String period = time.split(":")[2].split("[0-9]+")[1];
+        System.out.println(period);
     }
 }
