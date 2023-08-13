@@ -56,10 +56,13 @@ public class Main {
 //        arr.add(4);
 //        arr.add(5);
 //        MinMax.minMaxSum(arr);
-        String time = "07:05:45PM";
-        String delimiters = "[a-zA-Z]+";
-        String[] numbers = time.split(delimiters)[0].split(":");
-        String period = time.split(":")[2].split("[0-9]+")[1];
-        System.out.println(period);
+//        String time = "07:05:45PM";
+//        String delimiters = "[a-zA-Z]+";
+//        String[] numbers = time.split(delimiters)[0].split(":");
+//        String period = time.split(":")[2].split("[0-9]+")[1];
+//        System.out.println(period);
+        List<Integer> apples = new ArrayList<>(Arrays.asList(new Integer[]{-2, 2, 1}));
+        List<Integer> oranges = new ArrayList<>(Arrays.asList(new Integer[]{5, -6}));
+        CountApplesAndOranges.countApplesAndOranges(7, 11, 5, 15, apples, oranges);
     }
 }
